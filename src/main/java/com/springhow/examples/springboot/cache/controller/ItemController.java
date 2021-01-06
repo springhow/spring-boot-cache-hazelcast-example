@@ -15,7 +15,7 @@ public class ItemController {
     }
 
     @GetMapping("/{id}")
-    public Item getItem(@PathVariable Integer id) {
+    public Item getItem(@PathVariable Integer id)  {
         return itemService.getItem(id);
     }
 
@@ -25,7 +25,7 @@ public class ItemController {
     }
 
     @PutMapping("/{id}")
-    public Item createItem(@PathVariable Integer id, @RequestBody Item request) {
+    public Item createItem(@PathVariable Integer id, @RequestBody Item request)  {
         return itemService.updateItem(id, request);
     }
 }

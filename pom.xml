@@ -9,10 +9,10 @@
         <relativePath/> <!-- lookup parent from repository -->
     </parent>
     <groupId>com.springhow.examples.springboot</groupId>
-    <artifactId>spring-boot-cache-example</artifactId>
+    <artifactId>spring-boot-cache-hazelcast-example</artifactId>
     <version>0.0.1-SNAPSHOT</version>
-    <name>spring-boot-cache-example</name>
-    <description>Example to demonstrate caching in spring boot</description>
+    <name>spring-boot-cache-hazelcast-example</name>
+    <description>Example to demonstrate hazelcast caching in spring boot</description>
 
     <properties>
         <java.version>1.8</java.version>
@@ -26,6 +26,11 @@
         <dependency>
             <groupId>org.springframework.boot</groupId>
             <artifactId>spring-boot-starter-data-jpa</artifactId>
+        </dependency>
+        <dependency>
+            <groupId>com.hazelcast</groupId>
+            <artifactId>hazelcast-all</artifactId>
+            <version>4.1.1</version>
         </dependency>
         <dependency>
             <groupId>com.h2database</groupId>

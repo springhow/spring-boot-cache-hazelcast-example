@@ -9,6 +9,7 @@ import org.springframework.cache.annotation.Cacheable;
 import org.springframework.stereotype.Service;
 
 import java.util.List;
+import java.util.concurrent.TimeUnit;
 
 @Service
 public class ItemService {
@@ -25,6 +26,11 @@ public class ItemService {
 
     @Cacheable(value = "items", key = "#id")
     public Item getItem(Integer id) {
+        try {
+            Thread.sleep(5000);
+        } catch (InterruptedException e) {
+            e.printStackTrace();
+        }
         Item item = itemRepository.findById(id).orElseThrow(RuntimeException::new);
         logger.info("Loading data from DB {}", item);
         return item;

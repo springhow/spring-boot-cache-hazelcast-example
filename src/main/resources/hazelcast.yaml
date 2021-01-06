@@ -1,0 +1,10 @@
+hazelcast:
+  cluster-name: springhow
+  group:
+#    management-center:
+#      enabled: true
+#      url: 'http://localhost:8080/'
+    network:
+      join:
+        multicast:
+          enabled: true
